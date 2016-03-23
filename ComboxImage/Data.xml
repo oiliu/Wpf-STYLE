@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<Taaaa>
+  <Teams>
+    <Team>
+      <Name>北京国安</Name>
+      <ImageUrl>中超队徽\北京国安.jpg</ImageUrl>
+    </Team>
+    <Team>
+      <Name>大连阿尔滨</Name>
+      <ImageUrl>中超队徽\大连阿尔滨.jpg</ImageUrl>
+    </Team>
+    <Team>
+      <Name>广州富力</Name>
+      <ImageUrl>中超队徽\广州富力.jpg</ImageUrl>
+    </Team>
+    <Team>
+      <Name>广州恒大</Name>
+      <ImageUrl>中超队徽\广州恒大.jpg</ImageUrl>
+    </Team>
+    <Team>
+      <Name>贵州人和</Name>
+      <ImageUrl>中超队徽\贵州人和.jpg</ImageUrl>
+    </Team>
+    <Team>
+      <Name>河南建业</Name>
+      <ImageUrl>中超队徽\河南建业.png</ImageUrl>
+    </Team>
+    <Team>
+      <Name>哈尔滨毅腾</Name>
+      <ImageUrl>中超队徽\哈尔滨毅腾.jpg</ImageUrl>
+    </Team>
+    <Team>
+      <Name>江苏舜天</Name>
+      <ImageUrl>中超队徽\江苏舜天.jpg</ImageUrl>
+    </Team>
+    <Team>
+      <Name>辽宁宏运</Name>
+      <ImageUrl>中超队徽\辽宁宏运.jpg</ImageUrl>
+    </Team>
+    <Team>
+      <Name>山东鲁能</Name>
+      <ImageUrl>中超队徽\山东鲁能.jpg</ImageUrl>
+    </Team>
+    <Team>
+      <Name>上海东亚</Name>
+      <ImageUrl>中超队徽\上海东亚.jpg</ImageUrl>
+    </Team>
+    <Team>
+      <Name>上海申花</Name>
+      <ImageUrl>中超队徽\上海申花.jpg</ImageUrl>
+    </Team>
+    
+    <Team>
+      <Name>上海申鑫</Name>
+      <ImageUrl>中超队徽\上海申鑫.jpg</ImageUrl>
+    </Team>
+    <Team>
+      <Name>天津泰达</Name>
+      <ImageUrl>中超队徽\天津泰达.jpg</ImageUrl>
+    </Team>
+    <Team>
+      <Name>长春亚泰</Name>
+      <ImageUrl>中超队徽\长春亚泰.jpg</ImageUrl>
+    </Team>
+  </Teams>
+</Taaaa>

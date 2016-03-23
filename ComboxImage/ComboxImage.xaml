@@ -1,0 +1,31 @@
+﻿<Controls:MetroWindow x:Class="WpfHeatMap.ComboxImage.ComboxImage"
+                      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                      xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
+                      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+                      Title="ComboxImage" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
+                      Height="350"
+                      Width="525">
+    <Window.Resources>
+        <ResourceDictionary>
+            <XmlDataProvider x:Key="ImageUrlSS" Source="/ComboxImage/Data.xml"/>
+            <DataTemplate x:Key="MatchDataTemplate">
+                <StackPanel Orientation="Horizontal" Margin="2">
+                    <Image Source="{Binding Mode=OneWay,XPath=ImageUrl}" Height="77" VerticalAlignment="Center" />
+                    <TextBlock Margin="20,0,0,0" Text="{Binding Mode=OneWay, XPath=Name}" Foreground="Black" VerticalAlignment="Center" />
+                </StackPanel>
+            </DataTemplate>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <StackPanel>
+            <ComboBox IsSynchronizedWithCurrentItem="True" 
+                ItemsSource="{Binding Mode=Default, Source={StaticResource ImageUrlSS}, XPath=/Taaaa/Teams/Team}" 
+                ItemTemplate="{DynamicResource MatchDataTemplate}" Height="77" 
+                HorizontalAlignment="Center" Margin="0,50,0,0" x:Name="comboBox1" 
+                VerticalAlignment="Top" Width="242" SelectedIndex="0"/>
+            <Button x:Name="Btn_GetComboboxSelectValue" Content="获得" Width="100" Margin="20" Click="button_Click" />
+        </StackPanel>
+
+    </Grid>
+</Controls:MetroWindow>
