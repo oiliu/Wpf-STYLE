@@ -1,0 +1,23 @@
+﻿<Window x:Class="WpfHeatMap.ExtraTimeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfHeatMap"
+        mc:Ignorable="d"
+        Title="ExtraTimeWindow" Height="300" Width="300" WindowStartupLocation="CenterScreen">
+    <Grid VerticalAlignment="Center">
+        <StackPanel>
+            <WrapPanel HorizontalAlignment="Center">
+                <ComboBox Width="100" Margin="10,10,0,10" SelectedIndex="0" x:Name="combox_ExtraTime">
+                    <ComboBoxItem>1</ComboBoxItem>
+                    <ComboBoxItem>3</ComboBoxItem>
+                    <ComboBoxItem>5</ComboBoxItem>
+                    <ComboBoxItem>10</ComboBoxItem>
+                </ComboBox>
+                <Label Content="分钟" Margin="0,10"></Label>
+            </WrapPanel>
+            <Button Width="80" Content="确认加时！" Click="Button_Click"></Button>
+        </StackPanel>
+    </Grid>
+</Window>
