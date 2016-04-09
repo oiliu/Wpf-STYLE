@@ -25,15 +25,13 @@ namespace WpfHeatMap
 
         private void btnPlus_Click(object sender, RoutedEventArgs e)
         {
-            TextBox txtBox1temp = (TextBox)txtBox1.Template.FindName("txtBox2", txtBox1);
-            txtBox1temp.Text = (Convert.ToInt32(txtBox1temp.Text) + 1).ToString();
+            txtBox2.Text = (Convert.ToInt32(txtBox2.Text) + 1).ToString();
         }
 
         private void btnMinus_Click(object sender, RoutedEventArgs e)
         {
-            TextBox txtBox1temp = (TextBox)txtBox1.Template.FindName("txtBox2", txtBox1);
-            if (Convert.ToInt32(txtBox1temp.Text) > 1)
-                txtBox1temp.Text = (Convert.ToInt32(txtBox1temp.Text) - 1).ToString();
+            if (Convert.ToInt32(txtBox2.Text) > 1)
+                txtBox2.Text = (Convert.ToInt32(txtBox2.Text) - 1).ToString();
         }
     }
 }
