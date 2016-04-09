@@ -1,0 +1,52 @@
+﻿<Window x:Class="WpfHeatMap.WinButtonTextbox"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfHeatMap"
+        mc:Ignorable="d" WindowStartupLocation="CenterScreen" ResizeMode="NoResize"
+        Title="WinButtonTextbox" Height="300" Width="300">
+    <Window.Resources>
+        <Style TargetType="Button" x:Key="btnStyle">
+            <Setter Property="Foreground" Value="#009dda"></Setter>
+            <Setter Property="Width" Value="50"></Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="FontSize" Value="20"></Setter>
+                    <Setter Property="Cursor" Value="Hand"></Setter>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    <Canvas>
+        <WrapPanel HorizontalAlignment="Center" Canvas.Top="20" Canvas.Left="50">
+            <Button Style="{StaticResource btnStyle}" Content="-" Click="btnMinus_Click">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border BorderBrush="#009dda" BorderThickness="1,1,0,1" CornerRadius="3,0,0,3" Name="PART_Background">
+                            <ContentPresenter Content="{TemplateBinding ContentControl.Content}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <TextBox Width="80" BorderThickness="0" TextAlignment="Center" x:Name="txtBox1">
+                <TextBox.Template>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Border BorderBrush="#009dda" BorderThickness="1" Name="PART_Background">
+                            <TextBox IsReadOnly="True" Foreground="#009dda" FontWeight="Bold" BorderThickness="0" Text="1" x:Name="txtBox2"></TextBox>
+                        </Border>
+                    </ControlTemplate>
+                </TextBox.Template>
+            </TextBox>
+            <Button Style="{StaticResource btnStyle}" Content="+" Click="btnPlus_Click">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border BorderThickness="0,1,1,1" CornerRadius="0,3,3,0" Name="PART_Background" BorderBrush="#009dda">
+                            <ContentPresenter Content="{TemplateBinding ContentControl.Content}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </WrapPanel>
+    </Canvas>
+</Window>
