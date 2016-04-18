@@ -4,4 +4,4 @@
 
 ![加减号控制数字大小](https://raw.githubusercontent.com/oiliu/Wpf-STYLE/master/img/2.gif)
 
-![加减号控制数字大小](https://raw.githubusercontent.com/oiliu/Wpf-STYLE/master/img/m.gif)
+![MessBox样式](https://raw.githubusercontent.com/oiliu/Wpf-STYLE/master/img/m.gif)
