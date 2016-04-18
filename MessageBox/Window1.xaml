@@ -5,9 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfHeatMap"
         mc:Ignorable="d" WindowStartupLocation="CenterScreen" ResizeMode="NoResize"
-        Title="Window1" Height="511.837" Width="766.531">
+        Title="Window1" Height="511.837" Width="766.531" WindowState="Maximized" Background="Black">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/弹窗模糊背景/BackgroundDecorator.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
     <Grid>
-        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="114,82,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
-
+        <Image Source="/弹窗模糊背景/01.jpg" Stretch="Fill"></Image>
+        <Button x:Name="button" Content="messageBox带模糊背景的" HorizontalAlignment="Center" VerticalAlignment="Center" Width="auto" Click="button_Click" Height="40"/>
+        <local:BackgroundDecorator x:Name="busyr" Panel.ZIndex="-1" />
     </Grid>
 </Window>

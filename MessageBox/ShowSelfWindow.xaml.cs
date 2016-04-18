@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Input;
+using System.Windows.Media;
 
 namespace WpfHeatMap
 {
@@ -34,12 +35,28 @@ namespace WpfHeatMap
         private void Yes_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             this.DialogResult = true;
+            if (GlobalParameter.backgroundDecorator != null)
+                GlobalParameter.backgroundDecorator.IsBusy = false;
             this.Close();
         }
         private void No_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             this.DialogResult = false;
+            if (GlobalParameter.backgroundDecorator != null)
+                GlobalParameter.backgroundDecorator.IsBusy = false;
             this.Close();
+        }
+
+        int i = 0;
+        protected override void OnRender(DrawingContext dc)
+        {
+            base.OnRender(dc);
+            if (i == 0)
+            {
+                i++;
+                double lblMessageH = this.lblMsg.ActualHeight;
+                this.Height += lblMessageH;
+            }
         }
     }
 }

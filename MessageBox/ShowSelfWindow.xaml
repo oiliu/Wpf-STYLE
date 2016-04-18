@@ -4,47 +4,73 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfHeatMap"
-        mc:Ignorable="d"
-        Title="UMessageBox" Height="130" Width="280" WindowStyle="None"   Background="{x:Null}"  
+        mc:Ignorable="d" 
+        Title="UMessageBox" Height="160" Width="320" WindowStyle="None"   Background="{x:Null}"  
         AllowsTransparency="True" WindowStartupLocation="CenterScreen">
     <Window.Resources>
         <Style TargetType="TextBlock">
             <Style.Triggers>
                 <EventTrigger RoutedEvent="Mouse.MouseEnter">
                     <EventTrigger.Actions>
-                        
+
                     </EventTrigger.Actions>
                 </EventTrigger>
                 <EventTrigger RoutedEvent="Mouse.MouseLeave">
                     <EventTrigger.Actions>
-                        
+
                     </EventTrigger.Actions>
                 </EventTrigger>
             </Style.Triggers>
         </Style>
+        <Style TargetType="Border" x:Key="borderButton">
+            <Setter Property="Width" Value="80"/>
+            <Setter Property="Height" Value="36"/>
+            <Setter Property="Background" Value="#1b6695"/>
+            <Setter Property="CornerRadius" Value="1"/>
+            <Setter Property="BorderBrush" Value="#FF60C1C1"/>
+            <Setter Property="BorderThickness" Value="0.5"/>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect BlurRadius="8" Color="Black" Direction="-50" Opacity="1" RenderingBias="Performance" ShadowDepth="2"/>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="BorderBrush" Value="Black"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
     </Window.Resources>
-    <Border Background="#F03A3A3A" Opacity="1" CornerRadius="3">
+    <Border Opacity="1" CornerRadius="3">
         <Canvas>
-            <Border Canvas.Top="0" Height="25"
-                    BorderThickness="0,0,0,1" BorderBrush="#FFEFE2E2">
-                <TextBlock x:Name="lblTitle" Text="test" HorizontalAlignment="Left" 
-                           Foreground="#FFCBBEBE" FontSize="14"
-                           VerticalAlignment="Center" Margin="5"/>
-            </Border>
+            <Rectangle Panel.ZIndex="-1" Stretch="Fill" Margin="0" Height="41" Width="320" >
+                <Rectangle.Fill>
+                    <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                        <GradientStop Color="#ffffff" Offset="0.01"/>
+                        <GradientStop Color="#436878" Offset="0.25"/>
+                        <GradientStop Color="#447387" Offset="0.75"/>
+                        <GradientStop Color="#356579" Offset="1"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle Panel.ZIndex="-1" Fill="#b8d7e9" Stretch="Fill" Margin="0" Height="207" Width="320" Canvas.Top="43" />
+            <TextBlock x:Name="lblTitle" Text="提示" HorizontalAlignment="Left" 
+                       Foreground="#ffffff" FontSize="24" FontFamily="微软雅黑"
+                       VerticalAlignment="Center" Canvas.Left="10" Canvas.Top="5"/>
+
             <TextBlock x:Name="lblMsg"
-                       Foreground="White" FontSize="14" 
-                       TextWrapping="Wrap" Text="test"
+                       Foreground="#000000" FontSize="26" FontFamily="微软雅黑"
+                       TextWrapping="Wrap" Text="这里是内容" Width="240"
                        HorizontalAlignment="Center" Canvas.Left="20"
-                       Canvas.Top="50" />
-            <Border BorderBrush="#FF60C1C1" BorderThickness="0.5" Height="22" 
-                    Canvas.Bottom="10" Canvas.Right="85" MouseLeftButtonDown="Yes_MouseLeftButtonDown"
-                 Name="border1" Width="49" Background="#FFC7C7C7" CornerRadius="2">
-                <TextBlock Text="YES" Background="{x:Null}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                       Canvas.Top="74"  />
+            <Border Style="{StaticResource borderButton}"
+                    Canvas.Bottom="20" Canvas.Right="110" MouseLeftButtonDown="Yes_MouseLeftButtonDown"
+                 Name="border1">
+                <TextBlock Text="确定" Background="{x:Null}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Foreground="#ffffff"/>
             </Border>
-            <Border BorderBrush="#FF60C1C1" BorderThickness="0.5" Height="22" 
-                    Canvas.Bottom="10" Canvas.Right="30" MouseLeftButtonDown="No_MouseLeftButtonDown"
-                Name="border2" Width="49" CornerRadius="2" Background="#FFC7C7D1">
-                <TextBlock Text="NO" Background="{x:Null}"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Border Name="border2" Style="{StaticResource borderButton}"
+                    Canvas.Bottom="20" Canvas.Right="15" MouseLeftButtonDown="No_MouseLeftButtonDown">
+                <TextBlock Text="取消" Background="{x:Null}"  HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Foreground="#ffffff"/>
             </Border>
         </Canvas>
     </Border>

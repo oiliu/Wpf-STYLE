@@ -25,7 +25,9 @@ namespace WpfHeatMap
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            ShowSelfWindow.ShowSelf("内容");
+            busyr.IsBusy = true;
+            GlobalParameter.backgroundDecorator = busyr;
+            ShowSelfWindow.ShowSelf("自定义弹出框");
         }
     }
 }
