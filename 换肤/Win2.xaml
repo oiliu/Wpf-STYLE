@@ -1,0 +1,12 @@
+﻿<Window x:Class="WpfHeatMap.WinSkin2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfHeatMap"
+        mc:Ignorable="d" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded"
+        Title="WinSkin2" Height="300" Width="300">
+    <Grid Style="{DynamicResource gridMainStyle}">
+        <Button x:Name="label_timerJ" Width="100" Height="40" Style="{DynamicResource btnDefaultStyle}" Foreground="Goldenrod" Content="13" VerticalAlignment="Center" HorizontalAlignment="Center" />
+    </Grid>
+</Window>
